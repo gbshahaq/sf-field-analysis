@@ -1,12 +1,11 @@
 # SF Field Analysis
 ## Overview
-SF Field Analysis is a Salesforce-focused utility designed to analyse metadata and field usage across your Salesforce organisation. It helps administrators and developers identify unused fields, optimise data models, and maintain a clean, efficient Salesforce environment.
+SF Field Analysis is a Salesforce-focused utility designed to analyse metadata and field usage across your Salesforce organisation. It helps adminis and developers identify unused fields, optimise data models, and maintain a clean, efficient Salesforce environment.
 This tool is particularly useful for:
 
-* Auditing field usage.
+* Auditing where fields are used and referenced
 * Identifying redundant or obsolete fields.
 * Supporting data governance and optimisation efforts.
-
 
 ## Features
 
@@ -22,6 +21,7 @@ This tool is particularly useful for:
 * Salesforce CLI (sf): Installed and authenticated with your org.
 * TypeScript: Installed globally or via project dependencies.
 * Access: API-enabled Salesforce org with appropriate permissions.
+* A locally stored copy of a SFDX project repository
 
 
 ## Installation
@@ -43,8 +43,10 @@ Run the CLI tool to analyse fields:
 ```
 # Directly with ts-node
 npx ts-node cli.ts <command> [options]
+
 # After build
-npm run buildnode dist/cli.js <command> [options]
+npm run build
+node dist/cli.js <command> [options]
 ```
 Example Commands
 ```
@@ -52,6 +54,10 @@ Example Commands
 npx ts-node cli.ts analyse --targetOrg myOrgAlias
 # Generate a report for unused fields
 npx ts-node cli.ts report --output unused-fields.csv
+
+# Analyze Opportunity fields and export both Excel and CSV
+npx ts-node cli.ts analyse -o Opportunity -g DevHub -r /Users/you/repo/force-app/main/default --csv",
+     
 ```
 
 ## Project Structure
