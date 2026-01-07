@@ -47,17 +47,23 @@ npx ts-node cli.ts <command> [options]
 # After build
 npm run build
 node dist/cli.js <command> [options]
+
+# Alternatively, install with npm then reference it anywhere
+# Install globally (from your project directory)
+npm i -g .
+
+# Then use the CLI anywhere:
+sf-field-analysis -o Case -g MyDev -r $env:USERPROFILE\Projects\SFRepo\force-app\main\default
+
+
 ```
 Example Commands
 ```
-# Analyse all fields in a Salesforce org
-npx ts-node cli.ts analyse --targetOrg myOrgAlias
-# Generate a report for unused fields
-npx ts-node cli.ts report --output unused-fields.csv
 
 # Analyze Opportunity fields and export both Excel and CSV
-npx ts-node cli.ts analyse -o Opportunity -g DevHub -r /Users/you/repo/force-app/main/default --csv",
-     
+node dist/cli.js -o Opportunity -g DevHub -r /Users/you/repo/force-app/main/default --csv",
+
+
 ```
 
 ## Project Structure
