@@ -1,5 +1,5 @@
-SF Field Analysis
-Overview
+# SF Field Analysis
+## Overview
 SF Field Analysis is a Salesforce-focused utility designed to analyse metadata and field usage across your Salesforce organisation. It helps administrators and developers identify unused fields, optimise data models, and maintain a clean, efficient Salesforce environment.
 This tool is particularly useful for:
 
@@ -8,7 +8,7 @@ Identifying redundant or obsolete fields.
 Supporting data governance and optimisation efforts.
 
 
-Features
+## Features
 
 Field Usage Analysis: Detect fields that are rarely or never used.
 Metadata Extraction: Pull field-level metadata for objects.
@@ -16,7 +16,7 @@ Customisable Reports: Generate detailed reports for decision-making.
 CLI Support: Run commands directly from the terminal for automation.
 
 
-Prerequisites
+## Prerequisites
 
 Node.js: Version 16 or higher.
 Salesforce CLI (sf): Installed and authenticated with your org.
@@ -24,7 +24,7 @@ TypeScript: Installed globally or via project dependencies.
 Access: API-enabled Salesforce org with appropriate permissions.
 
 
-Installation
+## Installation
 Clone the repository and install dependencies:
 
 ```
@@ -33,14 +33,12 @@ cd sf-field-analysis
 npm install
 ```
 
-Configuration
+## Configuration
 Before running the tool:
 
 Authenticate your Salesforce org using sf org login web
 
-
-
-Usage
+## Usage
 Run the CLI tool to analyse fields:
 ```
 # Directly with ts-node
@@ -56,7 +54,7 @@ npx ts-node cli.ts analyse --targetOrg myOrgAlias
 npx ts-node cli.ts report --output unused-fields.csv
 ```
 
-Project Structure
+## Project Structure
 ```
 sf-field-analysis/
   ├── src/
@@ -68,7 +66,7 @@ sf-field-analysis/
   └── README.md
 ```
 
-Extending the Tool
+## Extending the Tool
 To add new functionality:
 
 Create a new service in src/services/.
@@ -76,13 +74,13 @@ Register the command in cli.ts.
 Update documentation and add tests.
 
 
-Output
+## Output
 
 Reports are generated in Excel format for easy review.
 Includes object name, field name, usage statistics, and recommendations.
 
 
-Contributing
+## Contributing
 Contributions are welcome! Please:
 
 Fork the repository.
@@ -90,5 +88,5 @@ Create a feature branch.
 Submit a pull request with proper documentation and tests.
 
 
-License
+## License
 This project is licensed under the MIT License.
