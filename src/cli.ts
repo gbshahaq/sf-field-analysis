@@ -20,9 +20,9 @@ import { run } from "./run";
     .option("includeStandard", { type: "boolean", describe: "Include standard fields via Tooling API FieldDefinition", default: true })
     .option("csv", { type: "boolean", describe: "Also export a CSV alongside the Excel file", default: false })
     .option("noOpen", { type: "boolean", describe: "Do not attempt to open the Excel file automatically", default: false })
-    .example("$0 -o Case -g ShamDev", "Analyze Case fields in default Gearset path")
+    .example("$0 -o Case -g MyDevOrg", "Analyze Case fields in default repo path")
     .example(
-      "$0 --object Case --org ShamDev --repoRoot \"C:\\repo\\force-app\\main\\default\"",
+      "$0 --object Case --org MyDevOrg --repoRoot \"C:\\repo\\force-app\\main\\default\"",
       "Analyze Case fields in an SFDX project on Windows"
     )
     .example(
