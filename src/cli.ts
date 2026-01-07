@@ -7,13 +7,13 @@ import { run } from "./run";
   const argv = await yargs(hideBin(process.argv))
     .scriptName("sf-field-analysis")
     .usage("$0 [options]")
-    .option("object", { alias: "o", type: "string", describe: "SObject API name", default: "Case" })
-    .option("org", { alias: "g", type: "string", describe: "Salesforce org alias", default: "ShamDev" })
-    .option("outDir", { alias: "d", type: "string", describe: "Base output directory (defaults to ~/Projects/GearsetCRM)" })
+    .option("object", { alias: "o", type: "string", describe: "SObject API name" })
+    .option("org", { alias: "g", type: "string", describe: "Salesforce org alias" })
+    .option("outDir", { alias: "d", type: "string", describe: "Base output directory (defaults to ~/)" })
     .option("repoRoot", {
       alias: "r",
       type: "string",
-      describe: "Path to metadata root (e.g., .../force-app/main/default). Overrides the default unpackaged path.",
+      describe: "Path to metadata root (e.g., .../force-app/main/default).",
     })
     .option("verbose", { alias: "v", type: "boolean", describe: "Enable verbose logging", default: true })
     .option("dryRun", { type: "boolean", describe: "Skip Salesforce LastModified query and reuse cached CSV if present", default: false })
