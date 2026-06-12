@@ -141,7 +141,7 @@ npm i -g .
 
 # Then use the CLI anywhere:
 sf-field-analysis -o Case -g MyDev -r $env:USERPROFILE\Projects\SFRepo\force-app\main\default
-
+```
 
 ## Project Structure
 ```
