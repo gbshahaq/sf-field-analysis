@@ -2,6 +2,18 @@
 
 Generate Excel-based documentation for Salesforce object fields to help admins and developers understand complex orgs faster.
 
+# Example Screenshots
+Showing multiple Apex and Flow references
+<img width="1760" height="589" alt="image" src="https://github.com/user-attachments/assets/9c78e9b8-6ce8-4c9c-84c8-a09c8a0b2fea" />
+
+Surfacing formula field values
+<img width="1562" height="433" alt="image" src="https://github.com/user-attachments/assets/a62c1f64-91fd-4ff9-a27d-97a77f4ae1a3" />
+
+Picklist values, dependent fields and Last Modified Date
+<img width="1159" height="654" alt="image" src="https://github.com/user-attachments/assets/3d1ad1fc-3112-4df5-a6ae-7f5408a33e95" />
+
+
+
 ## Overview
 
 When you join a new company or start working in an unfamiliar Salesforce org, one of the first challenges is simply understanding the data model.
